@@ -47,7 +47,17 @@ export default function BasicModal({
                     </p>
                   </div>
                 ))}
-              {!wordhistory && <p>No word checked yet</p>}
+              {wordhistory.length === 0 && (
+                <p
+                  style={{
+                    fontSize: "1.2rem",
+                    textAlign: "center",
+                    fontFamily: "monospace",
+                  }}
+                >
+                  No word checked yet
+                </p>
+              )}
             </div>
           </div>
           <center>
